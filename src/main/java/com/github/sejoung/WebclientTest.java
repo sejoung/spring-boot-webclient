@@ -19,8 +19,8 @@ public class WebclientTest {
 				.exchangeStrategies(strategies)
 				.build();
 
-		Mono<ClientResponse> result = webClient.get().uri("/hello").exchange();
-		result.subscribe(clientResponse -> clientResponse.bodyToMono(String.class).subscribe(WebclientTest::handleResponse));
+		Mono<ClientResponse> result = webClient.get().uri("/hello").retrieve().bodyToMono(String.class).doOnSuccess();
+		result.subscribe(clientResponse -> clientResponse.bodyToMono(String.class).subscribe(WebclientTest::handleResponse)).;
 		System.out.println("aaaa");
 
 		Thread.sleep(1000);
