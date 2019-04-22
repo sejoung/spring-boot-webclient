@@ -9,7 +9,7 @@
     <version>2.1.3.RELEASE</version>
   </parent>
   <groupId>com.github.sejoung</groupId>
-  <artifactId>webflux</artifactId>
+  <artifactId>webclient</artifactId>
   <packaging>jar</packaging>
   <version>0.1</version>
   <name>spring-boot-webclient</name>
